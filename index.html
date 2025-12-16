@@ -38,6 +38,44 @@
 
 <body style="margin:0; background:#bde4ff; font-family: Arial, Helvetica, sans-serif;">
 
+  
+<!-- 🔊 BACKGROUND MUSIC (YouTube) -->
+<div id="ytBox" style="display:none;">
+  <iframe
+    id="ytPlayer"
+    width="0"
+    height="0" 
+    src="https://www.youtube.com/embed/lZQ5XzKrUFM?start=20&enablejsapi=1&loop=1&playlist=lZQ5XzKrUFM"
+    frameborder="0"
+    allow="autoplay">
+  </iframe>
+</div>
+
+<div style="position:fixed; bottom:20px; right:20px; z-index:9999;">
+  <button onclick="playMusic()" style="
+    padding:10px 15px;
+    font-size:16px;
+    background:#004aa8;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;">
+    ▶ Play Music
+  </button>
+</div>
+
+<script>
+function playMusic(){
+  document.getElementById("ytBox").style.display = "block";
+  document.getElementById("ytPlayer").src += "&autoplay=1";
+}
+</script>
+<!-- 🔊 MUSIC END -->
+
+
+
+
+
 <!-- Top Contact Bar -->
 <div style="background:#004aa8; padding:10px; text-align:center;">
   <a href="mailto:dreamerslibrary2025@gmail.com" style="color:white; font-size:15px; margin-right:10px;" title="Click to send G-mail Dreamers Library & RK Tuition">📩 dreamerslibrary2025@gmail.com</a>
