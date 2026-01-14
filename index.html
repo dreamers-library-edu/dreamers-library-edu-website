@@ -45,7 +45,7 @@
 </div>
 
 <!-- Banner -->
-<div style="text-align:center; padding:10px;">
+<div id="top" style="text-align:center; padding:10px;">
   <marquee scrollamount="10" loop="-1">
   <h1 style="color:red; font-size:40px; margin:10px 0;">Welcome to Dreamers Library & RK Tution</h1></marquee>
   <img src="image/banner.gif" alt="Banner" style="width:100%; max-width:1000px; border-radius:8px;">
@@ -69,8 +69,6 @@
     <li><a href="#fees" style="font-size:20px; color:#6b0658;" title="Go to Fee Structure">💵 Fee Structure</a></li><br>
     <li><a href="#gallery" style="font-size:20px; color:#6b0658;" title="Go to Gallery">🖼️ Gallery</a></li><br>
     <li><a href="#contact" style="font-size:20px; color:#6b0658;" title="Go to Contact Us">📞 Contact Us</a></li><br>
-    <li><a href="#Admission" style="font-size:20px; color:#6b0658;" title="Go to Admission">📝 Admission</a></li><br>
-    <li><a href="#student record" style="font-size:20px; color:#6b0658;" title="Go to Fill Student Information">📄Fill Student Information</a></li><br>
     <li><a href="https://maps.app.goo.gl/AoirRs7TzuR8atr76" style="font-size:20px; color:#6b0658;" title="view location on Google map">🗺️📌Location</a></li>
   </ul>
 </details>
@@ -163,184 +161,22 @@
   </p>
 </section>
 
-<!-- ADMISSION SECTION START -->
-<br>
-<details>
-  <summary><h2 style="text-align:center; color:#004aa8; margin-bottom:15px;">📌 Admission & Library Fee Portal (Tap to Open) </h2></summary>
-<div id="Admission" style="background:white; padding:25px; border-radius:12px; width:95%; margin:auto; box-shadow:0 0 10px rgba(0,0,0,0.2);">
-  <h4 style="text-align: center; color: #013fb9; margin-bottom: auto;">📝Fill admission form or pay library fee online</h4>
-
-  <form id="admForm" style="font-size:18px;">
-
-    <label>Full Name:</label>
-    <input type="text" id="fullName" placeholder="Enter your full name" required
-    style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px; margin-bottom:15px;">
-
-    <label>Mobile Number:</label>
-    <input type="number" id="mobile" placeholder="Enter mobile number" required
-    style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px; margin-bottom:15px;">
-
-    <label>Address:</label>
-    <input type="text" id="address" placeholder="Enter address" required
-    style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px; margin-bottom:15px;">
-
-    <label>Kya aap pehle se yaha tuition padh rahe ho?</label>
-    <select id="studySelect" required
-    style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px; margin-bottom:15px;">
-      <option value="">Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-
-    <div id="codeBox" style="display:none; margin-bottom:15px;">
-      <label>Tuition Code Enter Kare:</label>
-      <input type="text" id="codeInput" placeholder="Enter tuition code"
-      style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px;">
-    </div>
-
-    <h3 id="feeText" style="color:green; margin-top:5px;"></h3>
-
-    <div id="paymentBox" style="display:none; margin-top:15px; text-align:center;">
-      <h3 style="color:#004aa8;">QR Scan Karke Payment Kare</h3>
-      <!--Adding qr code-->
-      <img src="image/qr code not.png" width="210" height="210" style="border:4px solid #004aa8; border-radius:10px;">
-      <p style="color:#004aa8; font-size:16px; margin-top:5px;">Payment hone ke baad niche details bhare</p>
-
-      <input type="text" id="payID" placeholder="Payment Transaction ID Enter Kare"
-      style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px; margin-top:15px;">
-
-      <input type="number" id="payAmount" placeholder="QR se bheji hui amount enter kare"
-      style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px; margin-top:15px;">
-
-      <input type="file" id="payShot" accept="image/*"
-      style="width:100%; padding:10px; border:2px solid #004aa8; border-radius:6px; margin-top:15px;">
-      <p id="ssNote" style="display:none; font-size:16px; color:#ff5c00; margin-top:8px;">
-        ⚠ Screenshot select karne ke baad WhatsApp par bheje aur submit kare.
-      </p>
-    </div>
-
-    <button type="submit"
-    style="width:100%; padding:15px; font-size:20px; background:#004aa8; color:white; border:none; border-radius:6px; margin-top:20px;">
-      Submit
-    </button>
-
-    <p id="msg" style="font-size:18px; text-align:center; margin-top:18px;"></p>
-  </form>
-</div></details>
-<!-- ADMISSION SECTION END -->
-
-<script>
-const select = document.getElementById("studySelect");
-const codeBox = document.getElementById("codeBox");
-const codeInput = document.getElementById("codeInput");
-const feeText = document.getElementById("feeText");
-const paymentBox = document.getElementById("paymentBox");
-const payShot = document.getElementById("payShot");
-const ssNote = document.getElementById("ssNote");
-const msg = document.getElementById("msg");
-
-let paymentAmount = 0;
-let waNumber = "916299943006";
-
-select.addEventListener("change", () => {
-    if (select.value === "yes") {
-        codeBox.style.display = "block";
-        feeText.innerText = "";
-        paymentBox.style.display = "none";
-    } else if (select.value === "no") {
-        codeBox.style.display = "none";
-        feeText.innerText = "Library Fee: ₹300";
-        paymentBox.style.display = "block";
-        paymentAmount = 300;
-    }
-});
-
-codeInput.addEventListener("input", () => {
-    if (codeInput.value === "##ranJIT@123##") {
-        feeText.innerText = "Library Fee: ₹200";
-        paymentBox.style.display = "block";
-        paymentAmount = 200;
-    } else {
-        feeText.innerText = "Wrong Code";
-        paymentBox.style.display = "none";
-    }
-});
-
-payShot.addEventListener("change", () => {
-    if (payShot.files.length > 0) ssNote.style.display = "block";
-});
-
-document.getElementById("admForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (paymentBox.style.display === "block") {
-        let tID = document.getElementById("payID").value.trim();
-        let amt = Number(document.getElementById("payAmount").value);
-
-        if (tID.length < 8) return (msg.innerHTML = "❌ Incorrect Payment ID", msg.style.color = "red");
-        if (amt !== paymentAmount) return (msg.innerHTML = "❌ Payment Amount not matching", msg.style.color = "red");
-        if (payShot.files.length === 0) return (msg.innerHTML = "❌ Payment Screenshot Upload Kare", msg.style.color = "red");
-    }
-
-    let name = document.getElementById("fullName").value;
-    let mobile = document.getElementById("mobile").value;
-
-    window.open(`https://wa.me/${waNumber}?text=Admission%20Form%20Submit%20Ho%20Gaya%0AName:%20${name}%0AMobile:%20${mobile}%0APlease%20attach%20Screenshot%20and%20Send`, "_blank");
-
-    msg.innerHTML = "✔ Admission Successfully Completed!";
-    msg.style.color = "green";
-});
-</script>
-<br><br>
-<!-- PASSWORD PROTECTED GOOGLE FORM LINK -->
- <div id="student record" style="text-align: center; font-size:x-large; font-style: oblique; color: rgb(239, 62, 8); font-weight: bolder;" > Registered Student Information Submission</div>
-<div style="text-align:center; margin:20px 0;">
-  <input type="password" id="formPass" placeholder="Enter Password"
-  style="padding:10px; font-size:16px; border:2px solid #004aa8; border-radius:6px;">
-
-  <br><br>
-  
-
-  <button onclick="openForm()"
-  style="padding:10px 25px; font-size:18px; background:#004aa8; color:white; border:none; border-radius:8px;">
-    Open Student Form
-  </button>
-
-  <p id="passMsg" style="margin-top:10px; font-size:16px;"></p>
-</div>
-
-<script>
-function openForm() {
-  var pass = document.getElementById("formPass").value;
-
-  if (pass === "RK/TUTION@2025") {
-    window.location.href = "https://forms.gle/sn2dYjGM7UDmV4bX7";
-  } else {
-    document.getElementById("passMsg").innerHTML = "❌ Wrong Password!";
-    document.getElementById("passMsg").style.color = "red";
-  }
-}
-</script>
-
-
-
-
-
 <!-- Creator -->
 
 
 
 <section style="padding:20px; margin:15px; background:white; border-radius:10px;">
-  <h2 style="text-align:center; color:#004680;">👨‍💻 Website Created By -</h2>
+  <h2 style="text-align:center; color:#004680;">👨‍💻 Website Designed & Developed By –</h2>
 
   <div style="text-align:center; font-size: x-large; font-weight: bolder; color: rgb(7, 21, 175);">
-    <a href="image/resume.pdf" target="_blank" title="View Resume">Sagar</a>
+    <a  href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank" title="View Resume">SV WebStudio</a><br>
+    <font size="4" color="red" face="sans-serif"><b>Phone:-</b> <a href="tel:+916207465071">+916207465071</a></font>
 
 
   </div>
 
   <div style="text-align:center; margin-top:10px;">
-    <img src="image/developer.jpg" style="width:160px; border-radius:10px;">
+    <a href="image/SV WebStudio.png" target="_blank"><img src="image/SV WebStudio.png" style="width:160px; border-radius:10px; display:block; margin:0 auto;"></a>
   </div>
   <p style="text-align:center; font-size:17px; margin-top:10px;">
     I designed this website for Dreamers Library & RK Tuition to make it easy for parents and students to see facilities, fees and contact details.
@@ -350,7 +186,7 @@ function openForm() {
 
 <!-- Footer -->
 <footer style="text-align:center; padding:12px; background:#004aa8; color:white; font-size:15px;">
-  © 2025 Dreamers Library & RK Tuition | <a href="index.html" target="_blank" style="color: white;">↑ Back to Top</a> | Website Developed by 💗<a href="image/resume.pdf"><font size="4" color="white" title="Click to view about developer">Sagar</font></a> | Concept by 💗<a href="image/mansagar.jpg"><font size="4" color="white" title="Click to view the Creator of this website"> Mansagar</font></a> <a href="index.html"><h3 align="right" title="Go to Top"><img src="image/upp.png" height="30" width="40"></h3></a>
+  © 2025 Dreamers Library & RK Tuition | <a href="#top" style="color: white;">↑ Back to Top</a> | Website Developed by 💗<a href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank"><font size="4" color="white">SV WebStudio</font></a> | Concept by 💗<a href="image/mansagar.jpg" target="_blank"><font size="4" color="white" title="Click to view the Creator of this website"> Mansagar</font></a> <a href="#top"><h3 align="right" title="Go to Top"><img src="image/upp.png" height="30" width="40"></h3></a>
 </footer>
 
 </body>
