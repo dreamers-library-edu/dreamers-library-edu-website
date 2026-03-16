@@ -32,6 +32,13 @@
     }
     fieldset { display: flex; flex-wrap: wrap; justify-content: center; }
 
+    body{
+      user-select: none;
+    }
+    a{
+      text-decoration: none;
+    }
+
   </style>
 </head>
 
@@ -41,12 +48,12 @@
 <div style="background:#004aa8; padding:10px; text-align:center;">
   <a href="mailto:dreamerslibrary2025@gmail.com" style="color:white; font-size:15px; margin-right:10px;" title="Click to send G-mail Dreamers Library & RK Tuition">📩 dreamerslibrary2025@gmail.com</a>
   <a href="tel:+916299943006" style="color:white; font-size:15px; margin-right:10px;" title="Click to contact Dreamers Library Owner">📞 +91 6299943006</a>
-  <a href="*https://chat.whatsapp.com/BhO2B18LPwP0qvcH8tf0J*" onclick="alert('Press OK to join group')" style="color:white; font-size:17px;" title="Go to WhatsApp Group">WhatsApp Group</a>
+  <a href="*https://chat.whatsapp.com/BhO2B18LPwP0qvcH8tf0J*" onclick="alert('WhatsApp group joining is temporarily closed. Please try again later.'); return false;" style="color:white; font-size:17px;" title="Go to WhatsApp Group">WhatsApp Group</a>
 </div>
 
 <!-- Banner -->
 <div id="top" style="text-align:center; padding:10px;">
-  <marquee scrollamount="10" loop="-1">
+  <marquee scrollamount="8" loop="-1">
   <h1 style="color:red; font-size:40px; margin:10px 0;">Welcome to Dreamers Library & RK Tution</h1></marquee>
   <img src="image/banner.gif" alt="Banner" style="width:100%; max-width:1000px; border-radius:8px;">
 </div>
@@ -104,7 +111,33 @@
 
 <!-- Fees -->
 <section id="fees" style="background:white; padding:20px; margin:15px; border-radius:8px;">
-  <h2 style="text-align:center; color:#004680;">💰 Fee Structure</h2>
+<h2 style="text-align:center; color:#004680;">💰 Fee Structure</h2>
+
+  <!-- NEW PROFESSIONAL OFFER BOX -->
+  <div style="background:linear-gradient(90deg,#ffefba,#ffffff);
+  border:2px solid #ff9800;
+  padding:12px;
+  margin:15px auto;
+  max-width:500px;
+  border-radius:8px;
+  text-align:center;
+  box-shadow:0 3px 8px rgba(0,0,0,0.15);">
+
+  <b style="color:#d32f2f; font-size:20px;">🎉 Special Offer</b><br>
+
+  <span style="font-size:18px;">
+  Library Study Space is <b style="color:green;">FREE</b> for <b>Class 10th Students</b>
+  </span>
+
+  <br><br>
+
+  <span style="font-size:18px;">
+  🎉 विशेष ऑफर: कक्षा <b>10</b> के छात्रों के लिए लाइब्रेरी <b style="color:green;">पूरी तरह मुफ्त</b> है।
+  </span>
+
+  </div>
+  <!-- END OFFER BOX -->
+
   <p style="font-size:18px; text-align:center;">
     Library Study Space: <b>₹300 per month</b><br>
     Tuition Fees: According to class & subjects<br><br>
@@ -114,15 +147,17 @@
      then the library charge will be ₹200 per month only.
   </p>
 
-  </p>
-    <p style="font-size:19px; color:#003355; text-align:center;">
+  <p style="font-size:19px; color:#003355; text-align:center;">
         लाइब्रेरी शुल्क: <b>₹300 प्रति माह</b> <br>
         ट्यूशन शुल्क: कक्षा और विषय के अनुसार (पूरी जानकारी के लिए संपर्क पर)<br><br>
 
         <b>विशेष छूट:</b> जो छात्र पहले से इस ट्यूशन में पढ़ रहे हैं <br>
         (लाइब्रेरी को छोड़कर किसी भी विषय की तैयारी कर रहे हों) <br>
         उन्हें लाइब्रेरी का शुल्क केवल ₹200 प्रति माह देना होगा।
-    </p>
+  </p>
+
+</section>
+
 </section>
 
 <!-- Gallery -->
@@ -278,7 +313,7 @@ Any updates will be published on this page.
 </section>
 <section style="text-align: center;">
 
-<a href="https://www.google.com/maps/place/Dreamers+library,+Rohini/@24.4746316,86.6440198,17z/data=!4m8!3m7!1s0x39f13f0044a2843f:0xca824870ef495717!8m2!3d24.4746316!4d86.6465947!9m1!1b1!16s%2Fg%2F11mm7j6qvy?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+<a href="https://www.google.com/maps/place/Dreamers+library,+Rohini/@24.4746316,86.6440198,17z/data=!4m8!3m7!1s0x39f13f0044a2843f:0xca824870ef495717!8m2!3d24.4746316!4d86.6465947!9m1!1b1!16s%2Fg%2F11mm7j6qvy?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" onclick="return confirm('You are being redirected to Google Maps to leave your feedback. Press OK to continue.')">
   <button style="background-color:#ff9800; color:white; padding:8px 15px; border:none; border-radius:6px; font-size:16px;">
     ⭐ Give Feedback on Google
   </button>
@@ -294,14 +329,14 @@ Any updates will be published on this page.
   <h2 style="text-align:center; color:#004680;  text-decoration: none;" >👨‍💻 Website Designed & Developed By –</h2>
 
   <div style="text-align:center; font-size: x-large; font-weight: bolder; color: rgb(7, 21, 175);">
-    <a  href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank" title="View my website" style=" text-decoration: none;">SV WebStudio</a><br>
+    <a  href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank" title="View my website" style=" text-decoration: none;" onclick="return confirm('You are about to visit our official website for web development services. Press OK to continue.')">SV WebStudio</a><br>
     <font size="4" color="red" face="sans-serif"><b>Phone:-</b> <a href="tel:+916207465071" style=" text-decoration: none;">+916207465071</a></font>
 
 
   </div>
 
   <div style="text-align:center; margin-top:10px;  text-decoration: none;">
-    <a href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank"><img src="image/svwebstudio.png" alt="SV WebStudio Logo" style="width:160px; border-radius:10px; display:block; margin:0 auto;" title="GO to my Website"></a>
+    <a href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank"><img src="image/svwebstudio.png" alt="SV WebStudio Logo" style="width:160px; border-radius:10px; display:block; margin:0 auto;" title="GO to my Website" onclick="return confirm('You are about to visit our official website for web development services. Press OK to continue .')"></a>
   </div>
   <p style="text-align:center; font-size:17px; margin-top:10px;">
     I designed this website for Dreamers Library & RK Tuition to make it easy for parents and students to see facilities, fees and contact details.
@@ -311,8 +346,7 @@ Any updates will be published on this page.
 
 <!-- Footer -->
 <footer style="text-align:center; padding:12px; background:#004aa8; color:white; font-size:15px;">
-  © 2025 - 2026 Dreamers Library & RK Tuition | <a href="#top" style="color: white; text-decoration: none;">↑ Back to Top</a> | Website Developed by 💗<a href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank" style=" text-decoration: none;"><font size="4" color="white">SV WebStudio</font></a> | Concept by 💗<a href="image/Mansagar resume 22.pdf" target="_blank" style=" text-decoration: none;"><font size="4" color="white" title="Click to view the Creator of this website"> Mansagar Varma</font></a> <a href="#top"><h3 align="right" title="Go to Top"><img src="image/upp.png" height="30" width="40"></h3></a>
-</footer>
+  © 2025 - 2026 Dreamers Library & RK Tuition | <a href="#top" style="color: white; text-decoration: none;">↑ Back to Top</a> | Website Developed by 💗<a href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank" style=" text-decoration: none;"><font size="4" color="white">SV WebStudio</font></a> | Concept by 💗<a href="https://drive.google.com/file/d/1OI51Zz80Y5uXAHDbh4_JEPqFTolHd_iq/view?usp=sharing" target="_blank" style=" text-decoration: none;"><font size="4" color="white" title="Click to view the Creator of this website"> Mansagar Varma</font></a>
 
 </body>
 </html>
