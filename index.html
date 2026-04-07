@@ -39,6 +39,57 @@
       text-decoration: none;
     }
 
+    li a:hover{
+      color: red;
+    }
+
+    summary{
+      background-color: #013fb9;
+    }
+
+    details summary:hover{
+      background-color: green;
+    }
+
+    img{
+      transition: 0.3s;
+
+    }
+
+    img:hover{
+      transform: scale(1.1);
+    }
+
+    footer font:hover{
+      color: rgb(191, 6, 6);
+    }
+
+    font {
+  display: inline-block;
+  transition: 0.3s;
+}
+
+font:hover {
+  transform: scale(2.2);
+}
+
+button{
+  background-color:#ff9800;
+
+}
+
+button:hover{
+  background-color: red;
+}
+
+#btn1{
+  background-color: green; 
+}
+
+#btn1:hover{
+  background-color: blue;
+}
+
   </style>
 </head>
 
@@ -68,17 +119,17 @@
 
 <!-- Menu -->
 <details style="margin:15px;">
-  <summary style="background:#0034ca; color:white; padding:10px; font-size:19px; border-radius:6px; width:170px;" title="Click to open Menu Bar">📂 Menu Bar</summary>
+  <summary style="color:white; padding:10px; font-size:19px; border-radius:6px; width:170px;" title="Click to open Menu Bar">📂 Menu Bar</summary>
   <ul style="list-style:none; padding:0; margin-top:12px;">
-    <li><a href="#home" style="font-size:20px; color:#6b0658; text-decoration: none;" title="Home">🏡 Home</a></li><br>
-    <li><a href="#about" style="font-size:20px; color:#6b0658; text-decoration: none;" title="Go to About us">👨‍💻 About us</a></li><br>
-    <li><a href="#facilities" style="font-size:20px; color:#6b0658; text-decoration: none;" title="Go to Facilities">⭐ Facilities</a></li><br>
-    <li><a href="#fees" style="font-size:20px; color:#6b0658; text-decoration: none;" title="Go to Fee Structure">💵 Fee Structure</a></li><br>
-    <li><a href="#gallery" style="font-size:20px; color:#6b0658; text-decoration: none;" title="Go to Gallery">🖼️ Gallery</a></li><br>
-     <li><a href="#privacy" style="font-size:20px; color:#6b0658; text-decoration: none;" title="Go to our Privacy Policy">🔒 Privacy Policy</a></li><br>
-    <li><a href="#contact" style="font-size:20px; color:#6b0658; text-decoration: none;" title="Go to Contact Us">📞 Contact Us</a></li><br>
-    <li><a href="#s_feedback" style="font-size: 20px; color: #6b0658; text-decoration: none;" title="Got to student feedback"> ⭐Student Feedback</a></li><br>
-    <li><a href="https://maps.app.goo.gl/AoirRs7TzuR8atr76" style="font-size:20px; color:#6b0658; text-decoration: none;" title="view location on Google map">🗺️📌Location</a></li>
+    <li><a href="#home" style="font-size:20px; text-decoration: none;" title="Home">🏡 Home</a></li><br>
+    <li><a href="#about" style="font-size:20px; text-decoration: none;" title="Go to About us">👨‍💻 About us</a></li><br>
+    <li><a href="#facilities" style="font-size:20px; text-decoration: none;" title="Go to Facilities">⭐ Facilities</a></li><br>
+    <li><a href="#fees" style="font-size:20px; text-decoration: none;" title="Go to Fee Structure">💵 Fee Structure</a></li><br>
+    <li><a href="#gallery" style="font-size:20px; text-decoration: none;" title="Go to Gallery">🖼️ Gallery</a></li><br>
+     <li><a href="#privacy" style="font-size:20px; text-decoration: none;" title="Go to our Privacy Policy">🔒 Privacy Policy</a></li><br>
+    <li><a href="#contact" style="font-size:20px; text-decoration: none;" title="Go to Contact Us">📞 Contact Us</a></li><br>
+    <li><a href="#s_feedback" style="font-size: 20px; text-decoration: none;" title="Got to student feedback"> ⭐Student Feedback</a></li><br>
+    <li><a href="https://maps.app.goo.gl/AoirRs7TzuR8atr76" style="font-size:20px; text-decoration: none;" title="view location on Google map">🗺️📌Location</a></li>
   </ul>
 </details>
 
@@ -191,7 +242,7 @@
 <section id="privacy" style="background:#ffffff; padding:25px; margin:15px; border-radius:10px; border-left:6px solid #004680; box-shadow:0 4px 12px rgba(0,0,0,0.07);">
 <details>
   <summary>
-<h2 style="text-align:center; color:#004680; margin-bottom:15px;">
+<h2 style="text-align:center; color:aliceblue; margin-bottom:15px;">
 🔒Our Privacy & Policy / हमारी गोपनीयता नीति ( Tap to view the complete Privacy Policy details)
 </h2> </summary>
 
@@ -270,7 +321,7 @@ Any updates will be published on this page.
   <h2 style="text-align:center; color:#004680;">📞 Contact Us</h2>
   <p style="text-align:center; font-size:18px;">
     Dreamers Library & RK Tuition <br>
-    Address: Rohini, Kevat Tola ( Near Mansha mandir) <a href="https://maps.app.goo.gl/AoirRs7TzuR8atr76"><button style="background-color: green; text-decoration: overline; color: aliceblue;" >View on Google map</button></a><br>
+    Address: Rohini, Kevat Tola ( Near Mansha mandir) <a href="https://maps.app.goo.gl/AoirRs7TzuR8atr76"><button id="btn1" style="text-decoration: overline; color: aliceblue;" >View on Google map</button></a><br>
     Call / WhatsApp: <b>6299943006 | 9523808805</b> <br>
     Calling Time: 7 AM to 11 PM <br>
     Opening Time: 24 Hours
@@ -314,7 +365,7 @@ Any updates will be published on this page.
 <section style="text-align: center;">
 
 <a href="https://www.google.com/maps/place/Dreamers+library,+Rohini/@24.4746316,86.6440198,17z/data=!4m8!3m7!1s0x39f13f0044a2843f:0xca824870ef495717!8m2!3d24.4746316!4d86.6465947!9m1!1b1!16s%2Fg%2F11mm7j6qvy?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" onclick="return confirm('You are being redirected to Google Maps to leave your feedback. Press OK to continue.')">
-  <button style="background-color:#ff9800; color:white; padding:8px 15px; border:none; border-radius:6px; font-size:16px;">
+  <button style=" color:white; padding:8px 15px; border:none; border-radius:6px; font-size:16px;">
     ⭐ Give Feedback on Google
   </button>
 </a>
