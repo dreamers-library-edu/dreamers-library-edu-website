@@ -34,13 +34,15 @@
 
     body{
       user-select: none;
+      scroll-behavior: smooth;
     }
     a{
       text-decoration: none;
     }
 
     li a:hover{
-      color: red;
+      color:red;
+      background-color: #ff9800;
     }
 
     summary{
@@ -60,9 +62,79 @@
       transform: scale(1.1);
     }
 
-    footer font:hover{
-      color: rgb(191, 6, 6);
+  
+    footer{
+        width: 100%;
+        height: 280px;
+        background-color: black;
+        float: left;
+        box-sizing: border-box;
     }
+
+    #contact_us{
+        width: 400px;
+        height:280px ;
+        float: left;
+        padding: 10px;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+
+    #contact_title{
+        color: white;
+        font-family: sans-serif;
+        font-size: 27px;
+        
+
+    }
+
+    #contact_address{
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        margin-bottom: 10px;
+
+    }
+
+    #social_pic{
+         width: 300px;
+        height:280px ;
+        float: right;
+        padding: 10px;
+        box-sizing: border-box;
+        
+    }
+
+    #social_logo{
+        width: 60px;
+    }
+
+    #developer{
+        color: white;
+        font-family: sans-serif;
+        float: left;
+        margin-left: 20px;
+        margin-top: 250px;
+        font-style: normal;
+    }
+
+    #developer_link{
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: normal;
+        text-decoration: none;
+    }
+
+    .contact-us-head{
+      color: white;
+      font-family: sans-serif;
+      font-size: 30px;
+      margin-left: 20px;
+
+    }
+
+    
 
     font {
   display: inline-block;
@@ -89,6 +161,7 @@ button:hover{
 #btn1:hover{
   background-color: blue;
 }
+
 
   </style>
 </head>
@@ -118,9 +191,11 @@ button:hover{
 <hr>
 
 <!-- Menu -->
+
 <details style="margin:15px;">
   <summary style="color:white; padding:10px; font-size:19px; border-radius:6px; width:170px;" title="Click to open Menu Bar">📂 Menu Bar</summary>
   <ul style="list-style:none; padding:0; margin-top:12px;">
+     <nav class="navbar">
     <li><a href="#home" style="font-size:20px; text-decoration: none;" title="Home">🏡 Home</a></li><br>
     <li><a href="#about" style="font-size:20px; text-decoration: none;" title="Go to About us">👨‍💻 About us</a></li><br>
     <li><a href="#facilities" style="font-size:20px; text-decoration: none;" title="Go to Facilities">⭐ Facilities</a></li><br>
@@ -130,8 +205,8 @@ button:hover{
     <li><a href="#contact" style="font-size:20px; text-decoration: none;" title="Go to Contact Us">📞 Contact Us</a></li><br>
     <li><a href="#s_feedback" style="font-size: 20px; text-decoration: none;" title="Got to student feedback"> ⭐Student Feedback</a></li><br>
     <li><a href="https://maps.app.goo.gl/AoirRs7TzuR8atr76" style="font-size:20px; text-decoration: none;" title="view location on Google map">🗺️📌Location</a></li>
-  </ul>
-</details>
+     </nav> </ul>
+</details>  
 
 <!-- About -->
 <section id="about" style="background:white; padding:20px; margin:15px; border-radius:8px;">
@@ -316,6 +391,76 @@ Any updates will be published on this page.
 </details>
 </section>
 
+<!-- Help Section -->
+<section id="help" style="background:#ffffff; padding:25px; margin:15px; border-radius:10px; border-left:6px solid #004680; box-shadow:0 4px 12px rgba(0,0,0,0.07);">
+
+<h2 style="text-align:center; color:#004680;">❓ Help & Support</h2>
+
+<details style="margin-top:10px;">
+  <summary style="color:white; padding:10px; font-size:18px; border-radius:6px;">📌 How to take Admission?</summary>
+  <p style="font-size:16px; padding:10px;">
+    You can take admission by visiting our library or contacting us via call/WhatsApp. 
+    Basic details and one ID proof may be required.
+    <br><br>
+    प्रवेश लेने के लिए आप हमारे लाइब्रेरी पर आ सकते हैं या कॉल/व्हाट्सएप के माध्यम से संपर्क कर सकते हैं।
+  </p>
+</details>
+
+<details>
+  <summary style="color:white; padding:10px; font-size:18px; border-radius:6px;">💰 How to pay Fees?</summary>
+  <p style="font-size:16px; padding:10px;">
+    Fees can be paid monthly in cash or via UPI (Google Pay / PhonePe).
+    <br><br>
+    शुल्क मासिक आधार पर नकद या UPI के माध्यम से जमा किया जा सकता है।
+  </p>
+</details>
+
+<details>
+  <summary style="color:white; padding:10px; font-size:18px; border-radius:6px;">⏰ Library & Tuition Timing</summary>
+  <p style="font-size:16px; padding:10px;">
+    Library is open 24 Hours. Calling time is 7 AM to 11 PM.
+    <br><br>
+    लाइब्रेरी 24 घंटे खुली रहती है। कॉल करने का समय सुबह 7 बजे से रात 11 बजे तक है।
+  </p>
+</details>
+
+<details>
+  <summary style="color:white; padding:10px; font-size:18px; border-radius:6px;">📚 Available Classes & Exams</summary>
+  <p style="font-size:16px; padding:10px;">
+    Tuition is available for Class 1 to 10+2 and competitive exams like RRB, SSC, GD etc.
+    <br><br>
+    कक्षा 1 से 10+2 और प्रतियोगी परीक्षाओं (RRB, SSC, GD आदि) की तैयारी कराई जाती है।
+  </p>
+</details>
+
+<details>
+  <summary style="color:white; padding:10px; font-size:18px; border-radius:6px;">📶 Facilities Available</summary>
+  <p style="font-size:16px; padding:10px;">
+    High-speed WiFi, personal study desk, pure drinking water and peaceful environment are available.
+    <br><br>
+    हाई-स्पीड वाई-फाई, व्यक्तिगत सीट, शुद्ध पानी और शांत वातावरण उपलब्ध है।
+  </p>
+</details>
+
+<details>
+  <summary style="color:white; padding:10px; font-size:18px; border-radius:6px;">📞 How to Contact Us?</summary>
+  <p style="font-size:16px; padding:10px;">
+    You can call or WhatsApp on: <b>6299943006 / 9523808805</b><br>
+    Email: dreamerslibrary2025@gmail.com
+  </p>
+</details>
+
+<details>
+  <summary style="color:white; padding:10px; font-size:18px; border-radius:6px;">⚠️ Rules & Discipline</summary>
+  <p style="font-size:16px; padding:10px;">
+    Maintain silence inside the library. Use mobile phones in silent mode. Keep the environment clean and disciplined.
+    <br><br>
+    लाइब्रेरी में शांति बनाए रखें, मोबाइल साइलेंट मोड में रखें और साफ-सफाई का ध्यान रखें।
+  </p>
+</details>
+
+</section>
+
 <!-- Contact -->
 <section id="contact" style="background:white; padding:20px; margin:15px; border-radius:8px;">
   <h2 style="text-align:center; color:#004680;">📞 Contact Us</h2>
@@ -396,8 +541,34 @@ Any updates will be published on this page.
 
 
 <!-- Footer -->
-<footer style="text-align:center; padding:12px; background:#004aa8; color:white; font-size:15px;">
-  © 2025 - 2026 Dreamers Library & RK Tuition | <a href="#top" style="color: white; text-decoration: none;">↑ Back to Top</a> | Website Developed by 💗<a href="https://svwebstudio.github.io/SV-WebStudio/" target="_blank" style=" text-decoration: none;"><font size="4" color="white">SV WebStudio</font></a> | Concept by 💗<a href="https://drive.google.com/file/d/1OI51Zz80Y5uXAHDbh4_JEPqFTolHd_iq/view?usp=sharing" target="_blank" style=" text-decoration: none;"><font size="4" color="white" title="Click to view the Creator of this website"> Mansagar Varma</font></a>
+                            <!--Developer-->
+  <footer>
+
+<div id="contact_us">
+    <h1 id="contact_title">Contact us</h1>
+
+    <address id="contact_address">Website: Dreamers Library & RK Tution</address>
+    <address id="contact_address">Phone Number : +916299943006 | +919523808805</address>
+    <address id="contact_address">Email Id: dreamerslibrary2025@gmail.com</address>
+    <address id="contact_address">Address: Rohini, Kevat Tola (Near Mansha Mandir), Jharkhand – 814152, India</address>
+    
+</div>
+
+
+
+<div id="developer"> ©2025-26 Dreamers Library & RK Tution | Website developed by<a href="https://svwebstudio.github.io/SV-WebStudio/" id="developer_link"> SV WebStudio </a>| All Rights Reserved</div>
+
+<div id="social_pic">
+    <h1 id="contact_title">Follow on us</h1>
+
+    <a href="##" onclick="alert('Social media services are temporarily unavailable at the moment. Thank you for your understanding—we’ll be back soon');return false;"> <img src="image/fb.png" id="social_logo"> </a>
+    <a href="###" onclick="alert('Social media services are temporarily unavailable at the moment. Thank you for your understanding—we’ll be back soon'); return false;"> <img src="image/tw.png" id="social_logo"> </a>
+    <a href="##" onclick="alert('Social media services are temporarily unavailable at the moment. Thank you for your understanding—we’ll be back soon');return false;"> <img src="image/yt.png" id="social_logo"> </a>
+    <a href="##" onclick="alert('Social media services are temporarily unavailable at the moment. Thank you for your understanding—we’ll be back soon');return false;"> <img src="image/insta.png" id="social_logo"> </a>
+</div>
+
+  </footer>
+
 
 </body>
 </html>
